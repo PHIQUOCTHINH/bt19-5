@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<form >
+  <h2>Add New Product</h2>
+    <input type="text" placeholder="New Product" id="Add">
+    <input type="button" onclick="add()" value="Add">
+    <h2>Display All Product</h2>
+<p id ="ds"></p>
+</form>
+<script>
+    let dsSP = []
+    function disPlay(dsSP) {
+        let s="";
+        for (let i=0;i<dsSP.length;i++){
+            s=s+(i+1)+". "+dsSP[i]+ "<button onclick=\"edit(dsSP)\"> Edit</button>\n" +
+                "<button onclick=\"clear(dsSP)\">Delete</button>\n" +"<br>" ;
+        }
+        return s;
+    }
+
+function add(dsSP) {
+  let  newMatHang =document.getElementById("Add")
+    matHang.push(newMatHang);
+            dsSP.push(document.getElementById("ds").innerHTML = disPlay(dsSP))
+
+    }
+
+    function edit(dsSP) {
+       let index = prompt("Nhập số thứ tự muốn sửa: ");
+        let newMatHang = prompt("tên muốn thay thế")
+        dsSP[index - 1] = newMatHang;
+        document.getElementById("ds").innerHTML = disPlay(dsSP);
+    }
+
+    function clear(dsSP) {
+        let index = prompt("Nhập số thứ tự muốn xóa: ");
+        matHang.splice(index - 1, 1);
+        document.getElementById("ds").innerHTML = disPlay(dsSP);
+    }
+
+
+document.getElementById("ds").innerHTML = disPlay(dsSP);
+</script>
+</body>
+</html>

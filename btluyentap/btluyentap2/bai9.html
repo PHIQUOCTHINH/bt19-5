@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+ let arr=[];
+let n=+prompt("nhập vào số phần tử của mảng");
+for(let i=0;i<n;i++){
+    arr[i]=prompt("nhập vào phần tử thứ "+(i+1)+"của mảng")
+}
+let so_nao_do=prompt('Nhập số cần xét vào đây:');
+document.write(quan_he_giua_so_va_mang(arr,so_nao_do));
+
+function quan_he_giua_so_va_mang(array,num) {
+    let count=0;
+    for(let i=0;i<array.length;i++) {
+        if( num==array[i]) {
+            count+=1;
+        }
+    }  if(count==0) {
+        return -1;
+    } else{
+        return count;
+    }
+
+}
+</script>
+</body>
+</html>

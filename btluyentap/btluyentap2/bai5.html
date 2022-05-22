@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function soNguyen(a){
+        let min = a[0]
+        for (let i= 1; i <4 ; i++){
+            if (a[i]<min){
+                min = a[i]
+            }
+        }
+        return min ;
+    }
+let a= [+prompt("nhập vào s1"),+prompt("nhập vào s2"),+prompt("nhập vào s3")]
+
+    let min =soNguyen(a)
+    alert(min)
+</script>
+</body>
+</html>
